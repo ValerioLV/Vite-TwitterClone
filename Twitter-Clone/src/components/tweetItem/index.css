@@ -1,0 +1,34 @@
+.TweetItem {
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+    padding: 12px;
+    height: fit-content;
+}
+  
+.TweetItem img {
+    width: 50px;
+    height: 50px;
+}
+
+.Tweet__profile-pic{
+    border-radius: 100%;
+}
+
+.UserName{
+    font-weight: bold;
+}
+
+.Tweet__body{
+    margin: 5px 0px;
+    font-size: 0.9rem;
+}
+
+.Tweet__icons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Tweet__icons img{
+    width: 20px;
+    height: 20px;
+}

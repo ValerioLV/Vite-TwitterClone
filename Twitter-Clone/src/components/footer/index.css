@@ -1,0 +1,16 @@
+.Footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    border-top: 1px solid lightgrey;
+    background-color: aqua;
+}
+
+.Footer img{
+    width: 30px;
+    height: 30px;
+}
