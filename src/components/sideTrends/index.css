@@ -1,0 +1,13 @@
+.SideTrends{
+    width: 30%;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    border-left: 1px solid lightgrey;
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .SideTrends{
+        display: block;
+    }
+}

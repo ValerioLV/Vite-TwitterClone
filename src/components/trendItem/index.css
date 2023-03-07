@@ -1,0 +1,8 @@
+.TrendItem{
+    display: flex;
+    flex-direction: column;
+}
+
+.TrendItem p, h3{
+    margin: 0;
+}

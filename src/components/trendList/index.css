@@ -1,0 +1,6 @@
+.TrendList{
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
