@@ -22,13 +22,3 @@
     margin: 5px 0px;
     font-size: 0.9rem;
 }
-
-.Tweet__icons{
-    display: flex;
-    justify-content: space-between;
-}
-
-.Tweet__icons img{
-    width: 20px;
-    height: 20px;
-}

@@ -6,7 +6,7 @@ const TrendList = () => {
     return (
         <div className="TrendList">
             {arrayTrends.map((trend, index) => (
-                <TrendItem data={trend} />
+                <TrendItem data={trend} key={index}/>
             ))}
         </div>
     )

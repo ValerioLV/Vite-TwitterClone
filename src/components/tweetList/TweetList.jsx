@@ -1,14 +1,24 @@
 import "./index.css";
-import tweetList from "../../mock/tweetsList";
-import TweetItem from "../tweetItem/TweetItem";
+import { useState , useEffect } from "react";
+import TweetItem from "../tweetItem";
+ 
 
 const TweetList = () => {
+    const [msgList, setTweetList] = useState([]);
+
+    useEffect(() => {
+        fetch('https://dummyjson.com/posts')
+            .then((res) => res.json())
+            .then((data) => setTweetList(data.posts));
+        }, []);
+        
     return(
         <div className="TweetList">
-            {tweetList.map((tweet) => (<TweetItem tweetData={tweet} key={tweet.id} />
+            {msgList.map((tweet) => (
+                <TweetItem tweetData={tweet} key={tweet.id} />
             ))}
         </div>
-    )
+    );
 };
 
 export default TweetList
