@@ -1,19 +1,41 @@
+import { useState ,useRef } from "react";
 import "./index.css"
 
 const TweetIcons = () => {
+    const [isLike, setIsLike] = useState(false)
+    const [countNum, setCountNum] = useState(0)
+    const countRef = useRef(0);
+
+    const onLikeBtn = () => setIsLike((prev) => !prev)
+    
+
+    const onCountIncrease = () => {
+        countRef.current++;
+        setCountNum(countRef.current)
+    };
+    
+
+    
+
     return(
         <div className="Tweet__icons">
-                    <img
-                        src="https://img.icons8.com/external-those-icons-lineal-those-icons/256/external-Chat-Bubble-messages-and-chat-those-icons-lineal-those-icons-10.png"
-                        alt="chat"
-                    />
+            <div className="CommentCount">
+                <img
+                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/256/external-Chat-Bubble-messages-and-chat-those-icons-lineal-those-icons-10.png"
+                    alt="chat"
+                    onClick={onCountIncrease}
+                />
+                <span>{countNum}</span>
+            </div>
+                    
                     <img
                         src="https://img.icons8.com/material-sharp/256/sorting-arrows-horizontal.png"
                         alt="arrow"
                     />
                     <img
-                        src="https://img.icons8.com/ios-glyphs/256/hearts.png"
+                        src={isLike ? "https://em-content.zobj.net/thumbs/120/twitter/322/red-heart_2764-fe0f.png" : "https://img.icons8.com/ios-glyphs/256/hearts.png"}
                         alt="heart"
+                        onClick={onLikeBtn}
                     />
                     <img 
                         src="https://img.icons8.com/ios-glyphs/256/bar-chart.png" 

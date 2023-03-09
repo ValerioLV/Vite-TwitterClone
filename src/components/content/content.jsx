@@ -1,13 +1,16 @@
+import { useState } from "react";
 import Header from "../header"
 import TweetList from "../tweetList";
 import Footer from "../footer"
 import "./index.css";
 
 const Content = () => {
+    const [headerInputValue, setHeaderInputValue] = useState('')
+
     return (
         <div className="Content">
-            <Header />
-            <TweetList />
+            <Header setHeaderInputValue={setHeaderInputValue}/>
+            <TweetList headerInputValue={headerInputValue}/>
             <Footer />
         </div>
     )
