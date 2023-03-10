@@ -2,9 +2,10 @@ import "./index.css";
 import TweetIcons from "../tweetIcons";
 import { useState, useEffect } from "react";
 
-const TweetItem = ({tweetData}) => {
+const TweetItem = ({tweetData, setTweetEditModal, setVisible}) => {
     const {  userId, body } = tweetData;
     const [profileData, setProfileData] = useState({});
+
 
     useEffect(() => {
         fetch(`https://dummyjson.com/users/${userId}`)
@@ -19,7 +20,7 @@ const TweetItem = ({tweetData}) => {
                 <span className="UserName">{profileData.username}</span>
                 <p className="Tweet__body">{body}</p>
            
-                <TweetIcons />
+                <TweetIcons setVisible={setVisible} tweetData={tweetData} setTweetEditModal={setTweetEditModal} />
             </div>
         </div>   
     )

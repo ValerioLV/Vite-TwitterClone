@@ -1,0 +1,36 @@
+.TweetModal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    
+}
+
+.show{
+    display: block;
+}
+
+.TModal__Overlay{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.EditModal{
+    background-color: white;
+    z-index: 2;
+    width: 350px;
+    padding: 10px;
+}
+
+.Tweet__Body{
+    width: 350px;
+    height: 200px;
+}

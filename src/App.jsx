@@ -1,9 +1,6 @@
-//Esercizio 9-3-23 - useRef
-// Ho implementato la possibilità di aumentare il numero di commenti presenti in un tweet premendo
-// l'apposita icona
-
-// Ho fatto un' aggiunta supplementare, ossia, tramite prop e una costante, posso filtare i commenti tramite 
-// il valore input della barra del header
+//Esercizio 10-3-23 - useRef
+// Ho provato ad implementare la funzionalità di editare i singoli tweet, ma ci sono riuscito
+// solo in parte
 
 import Content from './components/content/';
 import SideTrends from './components/sideTrends';
