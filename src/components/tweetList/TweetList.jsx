@@ -7,7 +7,6 @@ import TweetItem from "../tweetItem";
 const TweetList = ({headerInputValue}) => {
     const [msgList, setTweetList] = useState([]);
     const [tweetEditModal, setTweetEditModal] = useState(null)
-    const [visible, setVisible] = useState(false)
 
     const ListFilter = msgList.filter((msg) => msg.body.includes(headerInputValue));
     
@@ -20,13 +19,15 @@ const TweetList = ({headerInputValue}) => {
     return(
         <div className="TweetList">
             {ListFilter.map((tweet) => (
-                <TweetItem setVisible={setVisible} tweetData={tweet} setTweetEditModal={setTweetEditModal} key={tweet.id} />
+                <TweetItem tweetData={tweet} setTweetEditModal={setTweetEditModal} key={tweet.id} />
             ))}
-            <TweetModal 
-                visible={visible}
-                tweetData={tweetEditModal}
-                setTweetEditModal={setTweetEditModal}
-            />
+            {tweetEditModal ? (
+                <TweetModal 
+                    tweetData={tweetEditModal}
+                    setTweetEditModal={setTweetEditModal}
+                /> 
+            ) : null }
+            
         </div>
     );
 };

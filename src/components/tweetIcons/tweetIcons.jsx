@@ -1,7 +1,7 @@
 import { useState ,useRef } from "react";
 import "./index.css"
 
-const TweetIcons = ({tweetData ,setTweetEditModal, setVisible}) => {
+const TweetIcons = ({tweetData ,setTweetEditModal}) => {
     const [isLike, setIsLike] = useState(false)
     const [countNum, setCountNum] = useState(0)
     const countRef = useRef(0);
@@ -16,12 +16,11 @@ const TweetIcons = ({tweetData ,setTweetEditModal, setVisible}) => {
     
     const onHandleEdit = () => {
         setTweetEditModal(() => tweetData)
-        setVisible(true)
     }
     
 
     return(
-        <div className={`Tweet__icons`}>
+        <div className={"Tweet__icons"}>
             <div className="CommentCount">
                 <img
                     src="https://img.icons8.com/external-those-icons-lineal-those-icons/256/external-Chat-Bubble-messages-and-chat-those-icons-lineal-those-icons-10.png"

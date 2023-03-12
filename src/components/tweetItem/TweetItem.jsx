@@ -2,7 +2,7 @@ import "./index.css";
 import TweetIcons from "../tweetIcons";
 import { useState, useEffect } from "react";
 
-const TweetItem = ({tweetData, setTweetEditModal, setVisible}) => {
+const TweetItem = ({tweetData, setTweetEditModal}) => {
     const {  userId, body } = tweetData;
     const [profileData, setProfileData] = useState({});
 
@@ -20,7 +20,7 @@ const TweetItem = ({tweetData, setTweetEditModal, setVisible}) => {
                 <span className="UserName">{profileData.username}</span>
                 <p className="Tweet__body">{body}</p>
            
-                <TweetIcons setVisible={setVisible} tweetData={tweetData} setTweetEditModal={setTweetEditModal} />
+                <TweetIcons tweetData={tweetData} setTweetEditModal={setTweetEditModal} />
             </div>
         </div>   
     )

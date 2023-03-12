@@ -1,5 +1,6 @@
 .TweetModal{
-    display: none;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,12 +12,19 @@
     
 }
 
-.show{
-    display: block;
+.TweetModal__Content{
+    height: 220px;
+    position: fixed;
+    left: calc(50% - 175px);
+    z-index: 2;
+}
+
+.TweetModal__Submit{
+    position: relative;
+    top: 205px;
 }
 
 .TModal__Overlay{
-    display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -24,13 +32,14 @@
 }
 
 .EditModal{
+    position: fixed;
     background-color: white;
-    z-index: 2;
     width: 350px;
     padding: 10px;
 }
 
 .Tweet__Body{
+    position: fixed;
     width: 350px;
     height: 200px;
 }
